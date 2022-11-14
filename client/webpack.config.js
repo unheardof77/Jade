@@ -34,7 +34,12 @@ module.exports = () => {
         icons: [
           {
             src: path.resolve('./favicon.ico'),
-            sizes: [96, 128, 192, 256, 384, 512],
+            sizes: [48],
+            destination: path.join('assets', 'icons')
+          },
+          {
+            src: path.resolve('./src/images/logo.png'),
+            sizes: [500],
             destination: path.join('assets', 'icons')
           }
         ]
