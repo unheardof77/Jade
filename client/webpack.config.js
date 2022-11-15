@@ -22,7 +22,18 @@ module.exports = () => {
         template: './index.html',
         title: 'Jate',
       }),
-      new GenerateSW(),
+      new GenerateSW({
+        runtimeCaching: [
+          {
+            urlPattern: '/',
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'text',
+              
+            }
+          }
+        ]
+      }),
       new WebpackPwaManifest({
         name: 'Just Another Note Taker',
         short_name: 'Jade',
